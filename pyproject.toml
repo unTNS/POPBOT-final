@@ -4,6 +4,10 @@ version = "0.1.0"
 description = "bot discord"
 authors = ["chahyn <chahynfg@gmail.com>"]
 
+# Ajoutez cette section
+[tool.poetry.packages]
+include = [{include = "popbot", from = "."}]
+
 [tool.poetry.dependencies]
 python = "^3.11"
 discord-py = ">=2.5.2"
