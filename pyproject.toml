@@ -4,9 +4,11 @@ version = "0.1.0"
 description = "bot discord"
 authors = ["chahyn <chahynfg@gmail.com>"]
 
-# Ajoutez cette section
+# Correction de la section packages (doit être un array)
 [tool.poetry.packages]
-include = [{include = "popbot", from = "."}]
+includes = [
+    {include = "popbot", from = "."}     # Si votre code est directement dans popbot/
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
