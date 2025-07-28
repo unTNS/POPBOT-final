@@ -3,12 +3,7 @@ name = "popbot"
 version = "0.1.0"
 description = "bot discord"
 authors = ["chahyn <chahynfg@gmail.com>"]
-
-# Correction de la section packages (doit être un array)
-[tool.poetry.packages]
-includes = [
-    {include = "popbot", from = "."}     # Si votre code est directement dans popbot/
-]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
