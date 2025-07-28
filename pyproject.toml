@@ -3,7 +3,7 @@ name = "popbot"
 version = "0.1.0"
 description = "bot discord"
 authors = ["chahyn <chahynfg@gmail.com>"]
-package-mode = false
+package-mode = false  # Désactive la gestion de package
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -15,4 +15,3 @@ requests = ">=2.32.4"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
