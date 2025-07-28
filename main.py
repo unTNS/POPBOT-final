@@ -9,7 +9,22 @@ import re
 from discord.ext import commands
 from discord.ui import View, Button
 from discord import app_commands
+from flask import Flask
+import threading
 
+app = Flask(__name__)
+
+@app.route('/')
+def health_check():
+    return "Bot is running!"
+
+def run_flask():
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
+# Démarrer Flask dans un thread séparé
+flask_thread = threading.Thread(target=run_flask)
+flask_thread.daemon = True
+flask_thread.start()
 
 # Données en mémoire
 economy = {}        # {user_id: argent}
